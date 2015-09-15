@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="component">
+<head>
+    <meta charset="UTF-8">
+    <script src="../../angular.min.js"></script>
+    <script src="app.js"></script>
+    <link href="../../bootstrap.min.css" rel="stylesheet">
+    <style>
+        .red{
+            color: red;
+        }
+    </style>
+    <title></title>
+</head>
+<body class="container">
+
+
+
+<div class="row">
+    <div class="col-md-5">
+        <h3>
+            下面为大家演示我自定义的panel
+        </h3>
+        <br>
+
+        <panel title="这是标题">
+            <!--<p hot>-->
+                这是我要说的话…………………………
+            <!--</p>-->
+        </panel>
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">这是标题</h3>
+            </div>
+            <div class="panel-body" ng-transclude>
+                <p hot>
+                    这是我要说的话…………………………
+                </p>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+
+
+</body>
+</html>

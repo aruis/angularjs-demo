@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="mvc">
+<head>
+    <meta charset="UTF-8">
+    <script src="../../angular.min.js"></script>
+    <script src="app.js"></script>
+    <title></title>
+</head>
+<body ng-controller="TodoController as todoCtrl">
+<!--mvc 还有一个看不到的好处是作用域隔离，方法、属性的命名空间不互相污染-->
+    <h3>我还有{{todoCtrl.todos.length}}件事要做</h3>
+    <ul>
+        <li ng-repeat="todo in todoCtrl.todos">
+            <span>{{todo.text}}</span>
+        </li>
+    </ul>
+
+    <form ng-submit="todoCtrl.addTodo()">
+        <input ng-model="todoCtrl.todoText">
+        <input type="submit" value="添加">
+    </form>
+</body>
+</html>
