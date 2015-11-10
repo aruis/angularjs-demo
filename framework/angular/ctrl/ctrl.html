@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="cm.mvc">
+<head>
+    <meta charset="UTF-8">
+    <script src="../../angular.min.js"></script>
+    <script src="app.js"></script>
+    <title></title>
+</head>
+<body ng-controller="ParentController" >
+    <div ng-controller="ChildController as cctrl">
+        <span>{{::name}}</span>
+    </div>
+</body>
+</html>

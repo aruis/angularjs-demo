@@ -2,6 +2,9 @@
  * Created by liurui on 15/8/27.
  */
 angular.module('app', ['ngRoute'])
+    .config(function($locationProvider){
+        $locationProvider.html5Mode = true
+    })
     .controller('ViewController3', function () {
         this.name = '这是来自控制器的文字'
     })
