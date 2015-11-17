@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head >
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body >
+<div ng-controller="weatherCtrl">
+    <form name="searchWeather" ng-submit="getWeather()">
+        <input type="text" ng-model="city" >
+        <input type="submit" value="查询" ng-disabled="myForm.$invalid">
+    </form>
+    <ul >
+        <li ng-repeat="item in daily_forecast">{{item.cond.txt_d}} - {{item.cond.txt_n}}</li>
+    </ul>
+</div>
+
+    <script src="../../angular.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
